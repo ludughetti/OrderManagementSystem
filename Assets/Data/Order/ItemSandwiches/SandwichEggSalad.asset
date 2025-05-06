@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee13a3ae80ece634f9cb427aa1e12cc9, type: 3}
+  m_Name: SandwichEggSalad
+  m_EditorClassIdentifier: 
+  itemName: Egg Salad
+  itemDescription: 
+  basePrice: 0
+  icon: {fileID: 0}
+  orderType: 2
+  addOns:
+  - {fileID: 11400000, guid: ccdf27e2c9547f44f91ac71fd102c47f, type: 2}
+  - {fileID: 11400000, guid: 9f587d0c42cedd249842d847adf56335, type: 2}
+  - {fileID: 11400000, guid: b1489558cb4d3af4588a6fcdb26d5766, type: 2}
+  - {fileID: 11400000, guid: 74bf3a2cfe06bda40a460b7d76b76f85, type: 2}

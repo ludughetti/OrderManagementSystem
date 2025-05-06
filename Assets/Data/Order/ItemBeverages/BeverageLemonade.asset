@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee13a3ae80ece634f9cb427aa1e12cc9, type: 3}
+  m_Name: BeverageLemonade
+  m_EditorClassIdentifier: 
+  itemName: Lemonade
+  itemDescription: 
+  basePrice: 0
+  icon: {fileID: 0}
+  orderType: 0
+  addOns:
+  - {fileID: 11400000, guid: 54fe40ac718032d4b9ac46db1175d1d0, type: 2}
+  - {fileID: 11400000, guid: e333ce54836391b4aacaa54fdc5a0f82, type: 2}

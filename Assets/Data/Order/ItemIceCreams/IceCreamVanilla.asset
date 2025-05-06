@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee13a3ae80ece634f9cb427aa1e12cc9, type: 3}
+  m_Name: IceCreamVanilla
+  m_EditorClassIdentifier: 
+  itemName: Vanilla
+  itemDescription: 
+  basePrice: 0
+  icon: {fileID: 0}
+  orderType: 3
+  addOns:
+  - {fileID: 11400000, guid: 4742d628de7cb914e98544c8a5055198, type: 2}
+  - {fileID: 11400000, guid: 9ba1d183b936acc46bf65188081f87ee, type: 2}
+  - {fileID: 11400000, guid: 9f4bdffe928c2634f84325fd0cb3a802, type: 2}
+  - {fileID: 11400000, guid: ea0ee6ceb7fd78444a9c6b5828beaa63, type: 2}
+  - {fileID: 11400000, guid: 461964414cda1dc4c872d73c9ebd1fc1, type: 2}
