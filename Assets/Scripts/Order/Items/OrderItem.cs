@@ -7,14 +7,17 @@ namespace Order.Items
 {
     public class OrderItem
     {
-        public string ItemName { get; private set; }
-        public string ItemDescription { get; private set; }
-        public float Price { get; private set; }
-        public Sprite Icon { get; private set; }
-        public OrderType OrderType { get; private set; }
-        private List<AddOn> AddOns { get; }
+        public string ItemName { get; set; }
+        public string ItemDescription { get; set; }
+        public float Price { get; set; }
+        public Sprite Icon { get; set; }
+        public OrderType OrderType { get; set; }
+        public List<AddOn> AddOns { get; }
         
-        // Initialization for UI display
+        // Constructor for Builder
+        public OrderItem() { }
+        
+        // Constructor for parsing ScriptableObjects
         public OrderItem(OrderItemDataSource orderItemDataSource, OrderType orderType)
         {
             ItemName = orderItemDataSource.itemName;

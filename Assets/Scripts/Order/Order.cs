@@ -4,16 +4,10 @@ using Order.Items;
 
 namespace Order
 {
-    public abstract class Order
+    public class Order
     {
-        public OrderType Type { get; protected set; }
-        protected List<OrderItem> Items { get; }
-
-        protected Order(OrderType type)
-        {
-            Type = type;
-            Items = new List<OrderItem>();
-        }
+        public OrderType Type { get; set; }
+        public List<OrderItem> Items { get; set; }
         
         public virtual void AddItem(OrderItem item)
         {

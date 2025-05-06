@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Order.Items.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "AddOnDefinition", menuName = "Scriptable Objects/Order/AddOnDefinition")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Orders/Add-on")]
     public class AddOnDataSource : ScriptableObject
     {
         public string addOnName;

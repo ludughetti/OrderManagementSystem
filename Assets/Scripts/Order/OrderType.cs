@@ -4,7 +4,7 @@ namespace Order
     {
         Beverage,
         Pastry,
-        Sandwiches,
+        Sandwich,
         IceCream,
         Combo
     }

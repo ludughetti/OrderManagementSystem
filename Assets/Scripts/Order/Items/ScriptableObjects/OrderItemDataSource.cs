@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Order.Items.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "OrderItemDefinition", menuName = "Scriptable Objects/Order/OrderItemDefinition")]
+    [CreateAssetMenu(menuName = "Scriptable Objects/Orders/Order Item")]
     public class OrderItemDataSource : ScriptableObject
     {
         public string itemName;
