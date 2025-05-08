@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c67f626faf5ab547b8fca81cada3c43, type: 3}
+  m_Name: BeverageDataSource
+  m_EditorClassIdentifier: 
+  orderName: Beverages
+  orderDescription: Refreshing or comforting, your drink of choice
+  orderIcon: {fileID: 0}
+  type: 0
+  orderItems:
+  - {fileID: 11400000, guid: bc1f692496c680546bbae1f1ade073bb, type: 2}
+  - {fileID: 11400000, guid: b429a15d1c2117c4a98bce34a6c616d6, type: 2}
+  - {fileID: 11400000, guid: e8a9f2f86c320cc42a6ecacb4b693a0f, type: 2}
+  - {fileID: 11400000, guid: 54d6e3e2bf05ffa4fa8fc348bce134dc, type: 2}
+  - {fileID: 11400000, guid: d078a58e99b1a4e45a975d64c8096759, type: 2}
