@@ -1,4 +1,4 @@
-using Order;
+using UnityEngine;
 
 namespace UI.Orders
 {
@@ -6,10 +6,13 @@ namespace UI.Orders
     {
         protected override void LoadScreenData()
         {
+            Debug.Log("Add Item Menu loading...");
             var orderItems = orderManager.GetAvailableOrderItems();
             
             foreach (var itemCardData in orderItems)
-                CreateCard(itemCardData, orderManager.AddNewItem);
+                CreateCard(itemCardData, navigationManager.GoToAddAddOnScreen);
+            
+            Debug.Log("Add Item Menu finished loading.");
         }
     }
 }

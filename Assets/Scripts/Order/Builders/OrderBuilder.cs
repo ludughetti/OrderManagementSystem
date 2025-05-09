@@ -1,3 +1,4 @@
+using System.Linq;
 using Order.Items;
 using Order.ScriptableObjects;
 
@@ -7,14 +8,23 @@ namespace Order.Builders
     {
         private readonly Order _order = new();
         
-        public void WithType(OrderType orderType)
+        public OrderBuilder WithType(OrderType orderType)
         {
             _order.Type = orderType;
+            return this;
         }
 
-        public void WithNewItem(OrderItem orderItem)
+        public OrderBuilder WithNewItem(OrderItem orderItem)
         {
             _order.Items.Add(orderItem);
+            return this;
+        }
+
+        public OrderBuilder RemoveItem(string orderItemName)
+        {
+            var itemToRemove = _order.Items.FirstOrDefault(item => item.ItemName == orderItemName); 
+            _order.Items.Remove(itemToRemove);
+            return this;
         }
 
         public Order Build()

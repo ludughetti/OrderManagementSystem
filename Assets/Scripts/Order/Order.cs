@@ -7,7 +7,7 @@ namespace Order
     public class Order
     {
         public OrderType Type { get; set; }
-        public List<OrderItem> Items { get; set; }
+        public List<OrderItem> Items { get; } = new();
         
         public virtual void AddItem(OrderItem item)
         {

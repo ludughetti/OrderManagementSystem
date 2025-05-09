@@ -10,28 +10,14 @@ namespace UI.Orders
     {
         [Header("Managers")]
         [SerializeField] protected OrderManager orderManager;
-        [SerializeField] private NavigationManager navigationManager;
+        [SerializeField] protected NavManager navigationManager;
         
         [Header("UI Handlers")]
-        [SerializeField] private MenuDataSource selfMenuData;
         [SerializeField] protected UIElementCard uiElementCardPrefab;
         [SerializeField] protected Transform cardContainer;
 
         private void OnEnable()
         {
-            navigationManager.OnScreenChanged += HandleScreenChanged;
-        }
-
-        private void OnDisable()
-        {
-            navigationManager.OnScreenChanged -= HandleScreenChanged;
-        }
-
-        private void HandleScreenChanged(string screenId)
-        {
-            if (selfMenuData.GetMenuId() != screenId) 
-                return;
-            
             ClearCards();
             LoadScreenData();
         }
