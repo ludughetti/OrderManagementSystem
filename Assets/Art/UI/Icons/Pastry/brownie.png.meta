@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: e45a18f59dc876d4aa81e0008bb31b91
+guid: d204fec0aa73b024cb1b2ae38210a6d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6756561971092126469
-    second: Standart Button Active 5_0
+      213: 2193378693456512474
+    second: brownie_0
+  - first:
+      213: -8616893578606395275
+    second: brownie_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +75,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standart Button Active 5_0
+      name: brownie_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 194
-        height: 45
+        x: 1
+        y: 29
+        width: 126
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50bfbdd905124cd50800000000000000
-      internalID: 6756561971092126469
+      spriteID: ad5c269fc42707e10800000000000000
+      internalID: 2193378693456512474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownie_1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57042dbc1f4aa6880800000000000000
+      internalID: -8616893578606395275
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Standart Button Active 5_0: 6756561971092126469
+      brownie_0: 2193378693456512474
+      brownie_1: -8616893578606395275
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

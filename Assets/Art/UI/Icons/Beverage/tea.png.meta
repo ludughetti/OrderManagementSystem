@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: e45a18f59dc876d4aa81e0008bb31b91
+guid: c0a296f957c058e4aab728bb6d9b9f98
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6756561971092126469
-    second: Standart Button Active 5_0
+      213: 5958804951127212771
+    second: tea_0
+  - first:
+      213: 6658315274015686853
+    second: tea_1
+  - first:
+      213: 2245785060009997195
+    second: tea_2
+  - first:
+      213: 1693961758203001912
+    second: tea_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standart Button Active 5_0
+      name: tea_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 194
-        height: 45
+        x: 28
+        y: 87
+        width: 12
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50bfbdd905124cd50800000000000000
-      internalID: 6756561971092126469
+      spriteID: 3e2c6cd288de1b250800000000000000
+      internalID: 5958804951127212771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tea_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 87
+        width: 12
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c04346e676176c50800000000000000
+      internalID: 6658315274015686853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tea_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 87
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8376c70d91aa2f10800000000000000
+      internalID: 2245785060009997195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tea_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 120
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c39cc7e39228710800000000000000
+      internalID: 1693961758203001912
       vertices: []
       indices: 
       edges: []
@@ -164,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Standart Button Active 5_0: 6756561971092126469
+      tea_0: 5958804951127212771
+      tea_1: 6658315274015686853
+      tea_2: 2245785060009997195
+      tea_3: 1693961758203001912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

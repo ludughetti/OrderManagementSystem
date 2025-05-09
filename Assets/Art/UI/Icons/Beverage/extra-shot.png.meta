@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: e45a18f59dc876d4aa81e0008bb31b91
+guid: 6109d1587f36e474bb5e6c92a5751b11
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6756561971092126469
-    second: Standart Button Active 5_0
+      213: -108209791472500148
+    second: expresso_0
+  - first:
+      213: 7545600378066302535
+    second: expresso_1
+  - first:
+      213: -4594836223705545379
+    second: expresso_2
+  - first:
+      213: -2193389184731770589
+    second: expresso_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standart Button Active 5_0
+      name: expresso_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 194
-        height: 45
+        width: 128
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +163,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50bfbdd905124cd50800000000000000
-      internalID: 6756561971092126469
+      spriteID: c42001a94cf8f7ef0800000000000000
+      internalID: -108209791472500148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: expresso_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 97
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746f1b7c09b57b860800000000000000
+      internalID: 7545600378066302535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: expresso_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 97
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d550fec8cccdb30c0800000000000000
+      internalID: -4594836223705545379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: expresso_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 97
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32111e558248f81e0800000000000000
+      internalID: -2193389184731770589
       vertices: []
       indices: 
       edges: []
@@ -164,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Standart Button Active 5_0: 6756561971092126469
+      expresso_0: -108209791472500148
+      expresso_1: 7545600378066302535
+      expresso_2: -4594836223705545379
+      expresso_3: -2193389184731770589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
