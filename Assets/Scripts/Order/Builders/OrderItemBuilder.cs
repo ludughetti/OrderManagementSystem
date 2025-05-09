@@ -1,13 +1,12 @@
 using Order.Items;
-using Order.Items.ScriptableObjects;
 using UnityEngine;
 
 namespace Order.Builders
 {
     public class OrderItemBuilder
     {
-        private readonly OrderItem _orderItem = new();
-
+        private readonly OrderItem _orderItem = new ();
+        
         public void WithName(string name)
         {
             _orderItem.ItemName = name;
@@ -33,9 +32,9 @@ namespace Order.Builders
             _orderItem.OrderType = orderType;
         }
 
-        public void WithNewAddOn(AddOnDataSource addOnDataSource)
+        public void WithNewAddOn(string addOnName, string addOnDescription, float addOnPrice, Sprite addOnIcon)
         {
-            _orderItem.AddOns.Add(new AddOn(addOnDataSource));
+            _orderItem.AddOns.Add(new AddOn(addOnName, addOnDescription, addOnPrice, addOnIcon));
         }
 
         public OrderItem Build()

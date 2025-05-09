@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Data;
+using Order.DTO;
 using Order.Factories;
-using Order.Items;
 using UnityEngine;
 
 namespace Order
@@ -11,8 +12,8 @@ namespace Order
     {
         [SerializeField] private OrderDataProvider orderDataProvider;
         
-        private Dictionary<OrderType, IOrderFactory> _factories;
-        private IOrderFactory _activeFactory;
+        private Dictionary<OrderType, OrderFactory> _factories = new ();
+        private OrderFactory _activeFactory;
         
         private void Start()
         {
@@ -21,16 +22,16 @@ namespace Order
 
         private void InitializeOrderFactories()
         {
-            foreach (OrderType orderType in Enum.GetValues(typeof(OrderType)))
+            foreach (var order in orderDataProvider.GetOrders())
             {
-                 var newFactory = GetOrderFactory(orderType);
-                 newFactory.Initialize(orderDataProvider.GetOrderItems(orderType));
+                 var newFactory = GetOrderFactory(order.type);
+                 newFactory.Initialize(orderDataProvider.GetItemsByOrderType(order.type));
                  
-                 _factories[orderType] = newFactory;
+                 _factories.TryAdd(order.type, newFactory);
             }
         }
 
-        private static IOrderFactory GetOrderFactory(OrderType orderType)
+        private OrderFactory GetOrderFactory(OrderType orderType)
         {
             return orderType switch
             {
@@ -43,13 +44,37 @@ namespace Order
             };
         }
 
-        public List<OrderItem> GetAvailableOrderItems(OrderType orderType)
+        public List<ElementCardData> GetAvailableOrders()
         {
-            return _factories[orderType].GetOrderItems();
+            return orderDataProvider
+                .GetOrders()
+                .Select(order => new ElementCardData(order.orderName, order.orderDescription, 
+                                                     order.orderIcon, order.type.ToString()))
+                .ToList();
         }
 
-        public void CreateNewOrder(OrderType orderType)
+        public List<ElementCardData> GetAvailableOrderItems()
         {
+            return _activeFactory
+                .GetOrderItems()
+                .Select(orderItem => new ElementCardData(orderItem.ItemName, orderItem.ItemDescription, 
+                                                         orderItem.Icon, orderItem.ItemName))
+                .ToList();
+        }
+        
+        public List<ElementCardData> GetAvailableAddOns()
+        {
+            return _activeFactory
+                .GetItemAddOns()
+                .Select(addOn => new ElementCardData(addOn.AddOnName, addOn.AddOnDescription,
+                                                     addOn.Icon, addOn.AddOnName))
+                .ToList();
+        }
+
+        public void CreateNewOrder(string orderTypeValue)
+        {
+            var orderType = (OrderType) Enum.Parse(typeof(OrderType), orderTypeValue);
+            
             _activeFactory = _factories[orderType];
             _activeFactory.StartNewOrder();
         }

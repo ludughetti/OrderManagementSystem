@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace Navigation
         [SerializeField] private List<MenuDataSource> availableMenus;
     
         private int _currentMenuIndex;
+
+        public Action<string> OnScreenChanged;
 
         private void Start()
         {
@@ -29,18 +32,16 @@ namespace Navigation
 
         private void HandleMenuChange(string id)
         {
-            for (var i = 0; i < availableMenus.Count; i++)
-            {
-                var menuWithId = availableMenus[i];
+            var target = availableMenus.Find(m => m.GetMenuId() == id);
+            if (target == null) return;
 
-                if (menuWithId.GetMenuId() != id) 
-                    continue;
-            
-                availableMenus[_currentMenuIndex].DataInstance.gameObject.SetActive(false);
-                menuWithId.DataInstance.gameObject.SetActive(true);
-                _currentMenuIndex = i;
-                break;
-            }
+            availableMenus[_currentMenuIndex].DataInstance.gameObject.SetActive(false);
+            target.DataInstance.gameObject.SetActive(true);
+            _currentMenuIndex = availableMenus.IndexOf(target);
+
+            // Trigger event in case there's any menu-specific config needed
+            // Such as loading order items in the Add Item screen
+            OnScreenChanged?.Invoke(id);
         }
     }
 }

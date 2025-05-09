@@ -18,5 +18,13 @@ namespace Order.Items
             Price = addOnDataSource.price;
             Icon = addOnDataSource.icon;
         }
+
+        public AddOn(string addOnName, string addOnDescription, float price, Sprite icon)
+        {
+            AddOnName = addOnName;
+            AddOnDescription = addOnDescription;
+            Price = price;
+            Icon = icon;
+        }
     }
 }

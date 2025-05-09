@@ -12,7 +12,7 @@ namespace Order.Items
         public float Price { get; set; }
         public Sprite Icon { get; set; }
         public OrderType OrderType { get; set; }
-        public List<AddOn> AddOns { get; }
+        public List<AddOn> AddOns { get; } = new ();
         
         // Constructor for Builder
         public OrderItem() { }

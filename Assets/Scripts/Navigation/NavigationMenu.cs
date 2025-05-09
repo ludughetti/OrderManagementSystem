@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 namespace Navigation
 {
     public class NavigationMenu : MonoBehaviour
@@ -30,7 +30,7 @@ namespace Navigation
             }
         }
     
-        private void HandleButtonClick(string id)
+        protected virtual void HandleButtonClick(string id)
         {
             OnMenuChange?.Invoke(id);
         }

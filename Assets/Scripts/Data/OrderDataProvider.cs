@@ -9,18 +9,23 @@ namespace Data
 {
     public class OrderDataProvider : MonoBehaviour
     {
-        [SerializeField] private List<OrderDataSource> data;
+        [SerializeField] private List<OrderDataSource> ordersData;
 
-        private Dictionary<OrderType, List<OrderItemDataSource>> _itemsByOrderType;
+        private List<OrderDataSource> _availableOrders = new ();
+        private Dictionary<OrderType, List<OrderItemDataSource>> _availableItemsByOrder;
 
         private void Awake()
         {
-            _itemsByOrderType = new Dictionary<OrderType, List<OrderItemDataSource>>();
+            _availableOrders = ordersData.GroupBy(order => order.type)
+                .Select(order => order.First())
+                .ToList();
+            
+            _availableItemsByOrder = new Dictionary<OrderType, List<OrderItemDataSource>>();
             List<OrderItemDataSource> allAvailableOrderItems = new ();
             
-            foreach (var item in data)
+            foreach (var item in ordersData)
             {
-                _itemsByOrderType.Add(item.type, item.orderItems);
+                _availableItemsByOrder.Add(item.type, item.orderItems);
                 allAvailableOrderItems.AddRange(item.orderItems);
             }
 
@@ -30,12 +35,17 @@ namespace Data
                                                         .Select(item => item.First())
                                                         .ToList();
 
-            _itemsByOrderType.Add(OrderType.Combo, uniqueOrderItems);
+            _availableItemsByOrder[OrderType.Combo] = uniqueOrderItems;
         }
 
-        public List<OrderItemDataSource> GetOrderItems(OrderType orderType)
+        public List<OrderDataSource> GetOrders()
         {
-            return _itemsByOrderType[orderType];
+            return _availableOrders;
+        }
+
+        public List<OrderItemDataSource> GetItemsByOrderType(OrderType orderType)
+        {
+            return _availableItemsByOrder[orderType];
         }
     }
 }
