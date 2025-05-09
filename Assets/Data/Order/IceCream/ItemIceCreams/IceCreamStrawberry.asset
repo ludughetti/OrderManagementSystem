@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: IceCreamStrawberry
   m_EditorClassIdentifier: 
   itemName: Strawberry
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 3
+  itemDescription: Two scoops of strawberry
+  basePrice: 5
+  icon: {fileID: 21300000, guid: 5b39c1fe4cc26534f9a6d40da976d674, type: 3}
   addOns:
   - {fileID: 11400000, guid: 4742d628de7cb914e98544c8a5055198, type: 2}
   - {fileID: 11400000, guid: 9ba1d183b936acc46bf65188081f87ee, type: 2}

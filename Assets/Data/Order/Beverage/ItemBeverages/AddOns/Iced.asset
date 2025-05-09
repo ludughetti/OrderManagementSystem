@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Iced
   m_EditorClassIdentifier: 
   addOnName: Iced
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Add ice to your beverage
+  price: 1
+  icon: {fileID: 21300000, guid: 112b51200b95e3148a748b1d33a92c4c, type: 3}

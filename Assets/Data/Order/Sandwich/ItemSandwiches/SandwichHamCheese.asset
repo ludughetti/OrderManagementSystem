@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: SandwichHamCheese
   m_EditorClassIdentifier: 
   itemName: Ham + Cheese
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 2
+  itemDescription: All time classic
+  basePrice: 7
+  icon: {fileID: 21300000, guid: 06103b6ceb453ff408e2034ea720e2d6, type: 3}
   addOns:
   - {fileID: 11400000, guid: ccdf27e2c9547f44f91ac71fd102c47f, type: 2}
   - {fileID: 11400000, guid: 9f587d0c42cedd249842d847adf56335, type: 2}

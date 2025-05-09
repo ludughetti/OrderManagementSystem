@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExtraSauce
   m_EditorClassIdentifier: 
   addOnName: Extra Sauce
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Extra sauce on both buns
+  price: 1
+  icon: {fileID: 21300000, guid: 88c873bacf8144a4b97778b60f799531, type: 3}

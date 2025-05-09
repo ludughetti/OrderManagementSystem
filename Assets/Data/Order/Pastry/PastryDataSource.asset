@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PastryDataSource
   m_EditorClassIdentifier: 
   orderName: Pastries
-  orderDescription: For all your delicatessen needs
-  orderIcon: {fileID: 0}
+  orderDescription: Sweets and delicacies
+  orderIcon: {fileID: 21300000, guid: 1e486dd6186efcc409c7417bbd9ad472, type: 3}
   type: 1
   orderItems:
   - {fileID: 11400000, guid: 6518ba95fbccc144083f12bf32ddb680, type: 2}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bacon
   m_EditorClassIdentifier: 
   addOnName: Bacon
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Fresh or crispy
+  price: 2
+  icon: {fileID: 21300000, guid: fbf1e32f9ae8c7f45b9376a671248146, type: 3}

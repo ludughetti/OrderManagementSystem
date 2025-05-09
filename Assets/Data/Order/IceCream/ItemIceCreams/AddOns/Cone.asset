@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Cone
   m_EditorClassIdentifier: 
   addOnName: Cone
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: 'Sweeter cone '
+  price: 1
+  icon: {fileID: 21300000, guid: e5cf8f05a7b0fcf469da16cc01526cf0, type: 3}

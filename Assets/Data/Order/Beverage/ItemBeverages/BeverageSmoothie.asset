@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: BeverageSmoothie
   m_EditorClassIdentifier: 
   itemName: Smoothie
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 0
+  itemDescription: Fresh fruit and milk
+  basePrice: 14
+  icon: {fileID: 21300000, guid: 22521d8b5e3fdff49900c0eb9677c6fc, type: 3}
   addOns:
   - {fileID: 11400000, guid: 54fe40ac718032d4b9ac46db1175d1d0, type: 2}
   - {fileID: 11400000, guid: a6073e80291056f45ad1a941b879d6bd, type: 2}

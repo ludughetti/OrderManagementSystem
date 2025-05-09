@@ -4,6 +4,7 @@ using System.Linq;
 using Data;
 using Order.DTO;
 using Order.Factories;
+using Order.Items;
 using UnityEngine;
 
 namespace Order
@@ -62,7 +63,7 @@ namespace Order
         public List<ElementCardData> GetAvailableOrderItems()
         {
             return _activeFactory
-                .GetOrderItems()
+                .GetAvailableOrderItems()
                 .Select(orderItem => new ElementCardData(orderItem.ItemName, orderItem.ItemDescription, 
                                                          orderItem.Icon, orderItem.ItemName))
                 .ToList();
@@ -119,6 +120,11 @@ namespace Order
             _activeFactory.RemoveItem(itemName);
         }
 
+        public void RemoveItem(int itemId)
+        {
+            _activeFactory.RemoveItem(itemId);
+        }
+
         public void AddNewAddOn(string addOnName)
         {
             _activeFactory.AddNewAddOn(addOnName);
@@ -127,6 +133,16 @@ namespace Order
         public void RemoveAddOn(string addOnName)
         {
             _activeFactory.RemoveAddOn(addOnName);
+        }
+
+        public string GetTotalPrice()
+        {
+            return _activeFactory.GetActiveOrderTotalValue().ToString();
+        }
+
+        public List<OrderItem> GetActiveOrder()
+        {
+            return _activeFactory.GetActiveOrderItems();
         }
     }
 }

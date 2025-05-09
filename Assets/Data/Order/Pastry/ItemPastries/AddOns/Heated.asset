@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Heated
   m_EditorClassIdentifier: 
   addOnName: Heated
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Warm and fuzzy
+  price: 1
+  icon: {fileID: 21300000, guid: cf5fc64d5594c094da11f57d7c7b94fb, type: 3}

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: IceCreamVanilla
   m_EditorClassIdentifier: 
   itemName: Vanilla
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 3
+  itemDescription: Two scoops of vanilla
+  basePrice: 5
+  icon: {fileID: 21300000, guid: c5e99ee786e5e9d46ae91f99dbf7ef61, type: 3}
   addOns:
   - {fileID: 11400000, guid: 4742d628de7cb914e98544c8a5055198, type: 2}
   - {fileID: 11400000, guid: 9ba1d183b936acc46bf65188081f87ee, type: 2}

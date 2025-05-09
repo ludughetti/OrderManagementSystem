@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: SandwichBLT
   m_EditorClassIdentifier: 
   itemName: BLT
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 2
+  itemDescription: Bacon, Lettuce, Tomato
+  basePrice: 8
+  icon: {fileID: 21300000, guid: c8c37e4fb2c53244582467b17d47a9c6, type: 3}
   addOns:
   - {fileID: 11400000, guid: 9f587d0c42cedd249842d847adf56335, type: 2}
   - {fileID: 11400000, guid: b1489558cb4d3af4588a6fcdb26d5766, type: 2}

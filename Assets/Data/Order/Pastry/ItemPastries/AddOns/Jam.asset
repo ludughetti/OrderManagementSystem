@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Jam
   m_EditorClassIdentifier: 
   addOnName: Jam
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Strawberry jam on top
+  price: 2
+  icon: {fileID: 21300000, guid: 04d947c392cb479488c8906265d7ffce, type: 3}

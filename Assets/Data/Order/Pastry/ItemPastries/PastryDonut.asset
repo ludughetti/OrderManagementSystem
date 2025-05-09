@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: PastryDonut
   m_EditorClassIdentifier: 
   itemName: Donut
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 1
+  itemDescription: Fan favorite!
+  basePrice: 4
+  icon: {fileID: 21300000, guid: 3d6fc563dc6588e4982883a1e83059df, type: 3}
   addOns:
   - {fileID: 11400000, guid: dbc6547443911514bbd78d9f12cc52bc, type: 2}
   - {fileID: 11400000, guid: 4a31d689f86f49140b213d6c80adba21, type: 2}

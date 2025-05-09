@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExtraShot
   m_EditorClassIdentifier: 
   addOnName: Extra Shot
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Extra shot of coffee
+  price: 3
+  icon: {fileID: 21300000, guid: 6109d1587f36e474bb5e6c92a5751b11, type: 3}

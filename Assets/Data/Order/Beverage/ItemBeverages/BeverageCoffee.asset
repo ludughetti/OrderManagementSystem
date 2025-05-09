@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: BeverageCoffee
   m_EditorClassIdentifier: 
   itemName: Coffee
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 0
+  itemDescription: Medium cup, warm
+  basePrice: 5
+  icon: {fileID: 21300000, guid: a75f41f26bb3e8f4985bf59b9c882121, type: 3}
   addOns:
   - {fileID: 11400000, guid: fb09fab46e81afc469731dbe61834842, type: 2}
   - {fileID: 11400000, guid: 1b47fbaaa51d3c94c92e2fe40e8f9ecd, type: 2}

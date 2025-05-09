@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LargeSize
   m_EditorClassIdentifier: 
   addOnName: Large Size
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Upgrade your beverage size
+  price: 3
+  icon: {fileID: 21300000, guid: 1a9a2959837812448aace90f3e3300d4, type: 3}

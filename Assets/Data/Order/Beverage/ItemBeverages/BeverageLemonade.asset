@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: BeverageLemonade
   m_EditorClassIdentifier: 
   itemName: Lemonade
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 0
+  itemDescription: Fresh-made, no sugar
+  basePrice: 10
+  icon: {fileID: 21300000, guid: 253d75854429e134788eb3bd6bfecb95, type: 3}
   addOns:
   - {fileID: 11400000, guid: 54fe40ac718032d4b9ac46db1175d1d0, type: 2}
   - {fileID: 11400000, guid: e333ce54836391b4aacaa54fdc5a0f82, type: 2}

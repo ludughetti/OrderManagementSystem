@@ -10,6 +10,7 @@ namespace Order.Factories
     public abstract class OrderFactory
     {
         private List<OrderItem> _availableItems = new ();
+        private List<AddOn> _availableAddOns = new ();
         private OrderBuilder _orderBuilder;
         private OrderItemBuilder _orderItemBuilder;
         private string _activeOrderItemName;
@@ -23,7 +24,7 @@ namespace Order.Factories
             return OrderType;
         }
         
-        public List<OrderItem> GetOrderItems()
+        public List<OrderItem> GetAvailableOrderItems()
         {
             return _availableItems;
         }
@@ -107,11 +108,25 @@ namespace Order.Factories
             Debug.Log($"Removing item with name { itemName }");
             _orderBuilder.RemoveItem(itemName);
         }
+        
+        public void RemoveItem(int itemId)
+        {
+            Debug.Log($"Removing item with id { itemId }");
+            _orderBuilder.RemoveItem(itemId);
+        }
 
         public void AddNewAddOn(string addOnName)
         {
             Debug.Log($"Adding new add-on with name { addOnName }");
-            _orderItemBuilder.WithNewAddOn(addOnName, "", 0.0f, null);
+            var addOn = _availableAddOns.FirstOrDefault(addOn => addOn.AddOnName == addOnName);
+
+            if (addOn == null)
+            {
+                _orderItemBuilder.WithNewAddOn(addOnName, "", 0.0f, null);
+                return;
+            }
+            
+            _orderItemBuilder.WithNewAddOn(addOn.AddOnName, addOn.AddOnDescription, addOn.Price, addOn.Icon);
         }
 
         public void RemoveAddOn(string addOnName)
@@ -119,10 +134,30 @@ namespace Order.Factories
             Debug.Log($"Removing new add-on with name { addOnName }");
             _orderItemBuilder.RemoveAddOn(addOnName);
         }
+
+        public float GetActiveOrderTotalValue()
+        {
+            var totalPrice = 0.0f;
+            foreach (var orderItem in _orderBuilder.GetOrderItems())
+            {
+                totalPrice += orderItem.Price;
+                totalPrice += orderItem.AddOns.Sum(addOn => addOn.Price);
+            }
+            
+            return totalPrice;
+        }
+
+        public List<OrderItem> GetActiveOrderItems()
+        {
+            return _orderBuilder.GetOrderItems();
+        }
         
         protected void ProcessOrderItemDataSource(OrderItemDataSource orderItemDataSource)
         {
             _availableItems.Add(new OrderItem(orderItemDataSource, OrderType));
+            
+            foreach (var addOn in orderItemDataSource.addOns)
+                _availableAddOns.Add(new AddOn(addOn));
         }
     }
 }

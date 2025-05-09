@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExtraCheese
   m_EditorClassIdentifier: 
   addOnName: Extra Cheese
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: 4 extra slices
+  price: 2
+  icon: {fileID: 21300000, guid: 0ed091bb6327d6945b13946b28f39d67, type: 3}

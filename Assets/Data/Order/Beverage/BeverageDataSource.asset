@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderName: Beverages
   orderDescription: Refreshing or comforting, your drink of choice
-  orderIcon: {fileID: 0}
+  orderIcon: {fileID: 21300000, guid: 237fabb4c42dc5d469b857003f9094fd, type: 3}
   type: 0
   orderItems:
   - {fileID: 11400000, guid: bc1f692496c680546bbae1f1ade073bb, type: 2}

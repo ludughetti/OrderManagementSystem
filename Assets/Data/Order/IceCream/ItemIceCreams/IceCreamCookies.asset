@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: IceCreamCookies
   m_EditorClassIdentifier: 
   itemName: Cookies N Cream
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 3
+  itemDescription: Two scoops of Cookies
+  basePrice: 7
+  icon: {fileID: 21300000, guid: 28e726f30f4279340ab8521c3fc3a46e, type: 3}
   addOns:
   - {fileID: 11400000, guid: 4742d628de7cb914e98544c8a5055198, type: 2}
   - {fileID: 11400000, guid: 9ba1d183b936acc46bf65188081f87ee, type: 2}

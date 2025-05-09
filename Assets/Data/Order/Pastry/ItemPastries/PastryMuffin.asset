@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: PastryMuffin
   m_EditorClassIdentifier: 
   itemName: Muffin
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 1
+  itemDescription: Sweet and spongey
+  basePrice: 4
+  icon: {fileID: 21300000, guid: 40c0c341db03cee44894a3af5a7b061e, type: 3}
   addOns:
   - {fileID: 11400000, guid: dbc6547443911514bbd78d9f12cc52bc, type: 2}
   - {fileID: 11400000, guid: 4a31d689f86f49140b213d6c80adba21, type: 2}

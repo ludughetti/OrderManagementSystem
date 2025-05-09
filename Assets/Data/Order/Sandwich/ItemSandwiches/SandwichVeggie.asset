@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: SandwichVeggie
   m_EditorClassIdentifier: 
   itemName: Veggie
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 2
+  itemDescription: Variety of fresh vegetables
+  basePrice: 6
+  icon: {fileID: 21300000, guid: 7f5616de4f9511c4d80f7eecc56aa422, type: 3}
   addOns:
   - {fileID: 11400000, guid: ccdf27e2c9547f44f91ac71fd102c47f, type: 2}
   - {fileID: 11400000, guid: 9f587d0c42cedd249842d847adf56335, type: 2}

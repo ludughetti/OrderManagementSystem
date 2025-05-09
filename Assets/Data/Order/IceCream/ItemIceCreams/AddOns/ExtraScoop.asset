@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExtraScoop
   m_EditorClassIdentifier: 
   addOnName: Extra Scoop
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Extra scoop of your favorite flavor
+  price: 2
+  icon: {fileID: 21300000, guid: d2e3f1aaac9393c41abdfd4e41e30b73, type: 3}

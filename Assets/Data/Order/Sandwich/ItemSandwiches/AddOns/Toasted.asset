@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Toasted
   m_EditorClassIdentifier: 
   addOnName: Toasted
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Warm and crispy
+  price: 1
+  icon: {fileID: 21300000, guid: 021a1606af9636548b592e07cccd2417, type: 3}

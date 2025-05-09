@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Glazed
   m_EditorClassIdentifier: 
   addOnName: Glazed
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Glazed sugar on top
+  price: 2
+  icon: {fileID: 21300000, guid: 73f48b8faa2c88c4a819c7b216c53c5e, type: 3}

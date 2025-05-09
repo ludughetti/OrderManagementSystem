@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ChocolateSyrup
   m_EditorClassIdentifier: 
   addOnName: Chocolate Syrup
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Syrup on top
+  price: 2
+  icon: {fileID: 21300000, guid: 6aa2d2f42394ae04da8674d90599dbf1, type: 3}

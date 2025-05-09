@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WhippedCream
   m_EditorClassIdentifier: 
   addOnName: Whipped Cream
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Extra foam on top
+  price: 3
+  icon: {fileID: 21300000, guid: 0cf465cb2c4686f41941cedc8fd9f511, type: 3}

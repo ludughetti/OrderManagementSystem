@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderName: Combo
   orderDescription: Get a nice mix of things!
-  orderIcon: {fileID: 0}
+  orderIcon: {fileID: 21300000, guid: 51f78c66b4c91a540b620b80d569d410, type: 3}
   type: 4
   orderItems: []

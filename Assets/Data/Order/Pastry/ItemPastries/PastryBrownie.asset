@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: PastryBrownie
   m_EditorClassIdentifier: 
   itemName: Brownie
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 1
+  itemDescription: Chocolate and nuts
+  basePrice: 6
+  icon: {fileID: 21300000, guid: d204fec0aa73b024cb1b2ae38210a6d5, type: 3}
   addOns:
   - {fileID: 11400000, guid: 4a31d689f86f49140b213d6c80adba21, type: 2}
   - {fileID: 11400000, guid: dbc6547443911514bbd78d9f12cc52bc, type: 2}

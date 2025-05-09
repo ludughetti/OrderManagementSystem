@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: BeverageTea
   m_EditorClassIdentifier: 
   itemName: Tea
-  itemDescription: 
-  basePrice: 0
-  icon: {fileID: 0}
-  orderType: 0
+  itemDescription: Herbal tea
+  basePrice: 4
+  icon: {fileID: 21300000, guid: c0a296f957c058e4aab728bb6d9b9f98, type: 3}
   addOns:
   - {fileID: 11400000, guid: 54fe40ac718032d4b9ac46db1175d1d0, type: 2}
   - {fileID: 11400000, guid: e333ce54836391b4aacaa54fdc5a0f82, type: 2}

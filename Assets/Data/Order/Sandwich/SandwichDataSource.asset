@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderName: Sandwiches
   orderDescription: The greatest salty snack
-  orderIcon: {fileID: 0}
+  orderIcon: {fileID: 21300000, guid: d83d9cf7df2f0084b8187f951cc428a9, type: 3}
   type: 2
   orderItems:
   - {fileID: 11400000, guid: 5a1e4eec5bc95434fa34519ce4b80c08, type: 2}

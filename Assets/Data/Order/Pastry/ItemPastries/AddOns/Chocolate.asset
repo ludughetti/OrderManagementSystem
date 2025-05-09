@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Chocolate
   m_EditorClassIdentifier: 
   addOnName: Chocolate
-  addOnDescription: 
-  price: 0
-  icon: {fileID: 0}
+  addOnDescription: Melted on top
+  price: 2
+  icon: {fileID: 21300000, guid: fa73bfadbae02034fad4e03bba82590b, type: 3}
