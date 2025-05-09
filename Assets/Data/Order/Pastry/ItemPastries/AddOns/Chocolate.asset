@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b207f441a8082df47a2ad872aa6e67f9, type: 3}
   m_Name: Chocolate
   m_EditorClassIdentifier: 
-  addOnName: 
+  addOnName: Chocolate
   addOnDescription: 
   price: 0
   icon: {fileID: 0}

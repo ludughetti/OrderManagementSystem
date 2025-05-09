@@ -7,9 +7,11 @@ namespace Navigation
     {
         [Header("Screens")]
         [SerializeField] private GameObject mainMenuScreen;
+        [SerializeField] private GameObject clientInfoScreen;
         [SerializeField] private GameObject createOrderScreen;
         [SerializeField] private GameObject addItemScreen;
         [SerializeField] private GameObject addAddOnScreen;
+        [SerializeField] private GameObject editOrderScreen;
         [SerializeField] private GameObject confirmOrderScreen;
 
         [Header("Managers")]
@@ -20,9 +22,11 @@ namespace Navigation
         private void Start()
         {
             // TODO: clean up
+            clientInfoScreen.SetActive(false);
             createOrderScreen.SetActive(false);
             addItemScreen.SetActive(false);
             addAddOnScreen.SetActive(false);
+            editOrderScreen.SetActive(false);
             confirmOrderScreen.SetActive(false);
         }
 
@@ -30,15 +34,32 @@ namespace Navigation
         {
             ShowScreen(mainMenuScreen);
         }
+
+        public void GoToClientInfoScreen()
+        {
+            ShowScreen(clientInfoScreen);
+        }
     
         public void GoToCreateOrderScreen()
         {
+            ShowScreen(createOrderScreen);
+        }
+        
+        public void SaveClientAndGoToCreateOrderScreen(string clientName, string clientAddress, string clientPhone)
+        {
+            orderManager.SaveClientData(clientName, clientAddress, clientPhone);
             ShowScreen(createOrderScreen);
         }
 
         public void ConfirmOrder()
         {
             orderManager.ConfirmOrder();
+            ShowScreen(mainMenuScreen);
+        }
+
+        public void CancelOrder()
+        {
+            orderManager.CancelOrder();
             ShowScreen(mainMenuScreen);
         }
 
@@ -61,14 +82,28 @@ namespace Navigation
             ShowScreen(addAddOnScreen);
         }
 
-        public void AddNewAddOn(string addOnName)
+        public void ToggleAddOn(string addOnName, bool isSelected)
         {
-            orderManager.AddNewAddOn(addOnName);
+            if (isSelected)
+                orderManager.AddNewAddOn(addOnName);
+            else 
+                orderManager.RemoveAddOn(addOnName);
+        }
+
+        public void GoToEditOrderScreen()
+        {
+            ShowScreen(editOrderScreen);
         }
 
         public void ConfirmItem()
         {
             orderManager.ConfirmItem();
+            GoToAddItemScreen();
+        }
+
+        public void CancelItem()
+        {
+            orderManager.CancelItem();
             GoToAddItemScreen();
         }
     

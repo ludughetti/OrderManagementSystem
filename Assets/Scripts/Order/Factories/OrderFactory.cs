@@ -54,7 +54,10 @@ namespace Order.Factories
         public void CancelOrder()
         {
             Debug.Log($"Cancelling new order with type { OrderType.ToString() }");
-            throw new System.NotImplementedException();
+            _orderBuilder = null;
+            
+            if(_orderItemBuilder != null)
+                CancelItem();
         }
 
         public void AddNewItem(string itemName)

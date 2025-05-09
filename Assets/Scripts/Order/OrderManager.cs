@@ -44,6 +44,12 @@ namespace Order
             };
         }
 
+        public void SaveClientData(string clientName, string clientAddress, string clientPhone)
+        {
+            // TODO: Save client info for notifications
+            Debug.Log($"Saving client data: {clientName}, {clientAddress}, {clientPhone}");
+        }
+
         public List<ElementCardData> GetAvailableOrders()
         {
             return orderDataProvider
