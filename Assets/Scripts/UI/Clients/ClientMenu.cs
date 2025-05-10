@@ -11,6 +11,7 @@ namespace UI.Clients
         [SerializeField] private TMP_InputField clientNameField;
         [SerializeField] private TMP_InputField clientAddressField;
         [SerializeField] private TMP_InputField clientPhoneField;
+        [SerializeField] private Toggle clientMemberToggle;
     
         [Header("Buttons")]
         [SerializeField] private Button confirmDataButton;
@@ -24,9 +25,10 @@ namespace UI.Clients
             var clientName = clientNameField.text;
             var clientAddress = clientAddressField.text;
             var clientPhone = clientPhoneField.text;
+            var isMember = clientMemberToggle.isOn;
             
             CleanFields();
-            navigationManager.SaveClientAndGoToCreateOrderScreen(clientName, clientAddress, clientPhone);
+            navigationManager.SaveClientAndGoToCreateOrderScreen(clientName, clientAddress, clientPhone, isMember);
         }
 
         public void CancelUserInfo()

@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace User.Clients
 {
-    public class ClientManager : MonoBehaviour
+    public class ClientManager
     {
         private List<Client> _activeClients = new ();
 
@@ -17,6 +18,11 @@ namespace User.Clients
         {
             Debug.Log("Client disconnected");
             _activeClients.Remove(client);
+        }
+
+        public Client GetActiveClient(int clientId)
+        {
+            return _activeClients.FirstOrDefault(client => client.UserId == clientId);
         }
     }
 }

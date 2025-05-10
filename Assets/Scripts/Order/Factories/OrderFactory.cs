@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+using Discounts;
+using Notifications;
 using Order.Builders;
 using Order.Items;
 using Order.Items.ScriptableObjects;
 using UnityEngine;
 using User;
+using User.Clients;
 
 namespace Order.Factories
 {
@@ -16,9 +19,12 @@ namespace Order.Factories
         private OrderItemBuilder _orderItemBuilder;
         private string _activeOrderItemName;
         protected OrderType OrderType;
-
-        public abstract void Initialize(List<OrderItemDataSource> availableItems);
-        public abstract void PrepareOrder();
+        
+        protected NotificationManager _notificationManager;
+        protected DiscountManager _discountManager;
+        
+        public abstract void Initialize(List<OrderItemDataSource> availableItems, NotificationManager notificationManager, DiscountManager discountManager);
+        public abstract void PrepareOrder(Order order);
 
         public OrderType GetActiveOrderType()
         {
@@ -49,6 +55,10 @@ namespace Order.Factories
         {
             Debug.Log($"Confirming new order with type { OrderType.ToString() }");
             var order = _orderBuilder.Build();
+            _discountManager.ApplyDiscountStrategy(order);
+            
+            PrepareOrder(order);
+            
             _orderBuilder = null;
 
             return order;
@@ -137,16 +147,9 @@ namespace Order.Factories
             _orderItemBuilder.RemoveAddOn(addOnName);
         }
 
-        public float GetActiveOrderTotalValue()
+        public Order GetActiveOrder()
         {
-            var totalPrice = 0.0f;
-            foreach (var orderItem in _orderBuilder.GetOrderItems())
-            {
-                totalPrice += orderItem.Price;
-                totalPrice += orderItem.AddOns.Sum(addOn => addOn.Price);
-            }
-            
-            return totalPrice;
+            return _orderBuilder.Build();
         }
 
         public List<OrderItem> GetActiveOrderItems()

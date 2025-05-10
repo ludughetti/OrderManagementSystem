@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Order.Items;
 using User;
+using User.Clients;
 
 namespace Order.Builders
 {

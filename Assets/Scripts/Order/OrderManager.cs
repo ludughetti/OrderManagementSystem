@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Data;
+using Discounts;
+using Notifications;
 using Order.DTO;
 using Order.Factories;
 using Order.Items;
@@ -15,8 +17,12 @@ namespace Order
     public class OrderManager : MonoBehaviour
     {
         [SerializeField] private OrderDataProvider orderDataProvider;
-        [SerializeField] private ClientManager clientManager;
-        [SerializeField] private EmployeeManager employeeManager;
+        
+        private ClientManager _clientManager = new ();
+        private EmployeeManager _employeeManager = new ();
+        private NotificationManager _notificationManager;
+        
+        private DiscountManager _discountManager = new ();
         
         private Dictionary<OrderType, OrderFactory> _factories = new ();
         private OrderFactory _activeFactory;
@@ -26,6 +32,7 @@ namespace Order
         
         private void Start()
         {
+            _notificationManager = new NotificationManager(_clientManager, _employeeManager);
             InitializeOrderFactories();
         }
 
@@ -34,7 +41,7 @@ namespace Order
             foreach (var order in orderDataProvider.GetOrders())
             {
                  var newFactory = GetOrderFactory(order.type);
-                 newFactory.Initialize(orderDataProvider.GetItemsByOrderType(order.type));
+                 newFactory.Initialize(orderDataProvider.GetItemsByOrderType(order.type), _notificationManager, _discountManager);
                  
                  _factories.TryAdd(order.type, newFactory);
             }
@@ -53,15 +60,15 @@ namespace Order
             };
         }
 
-        public void SaveClientData(string clientName, string clientAddress, string clientPhone)
+        public void SaveClientData(string clientName, string clientAddress, string clientPhone, bool isMember)
         {
             _userIdCount++;
             Debug.Log($"Saving active client data: {_userIdCount}, {clientName}, {clientAddress}, {clientPhone}");
             
-            var client = new Client(clientName, clientAddress, clientPhone);
+            var client = new Client(clientName, clientAddress, clientPhone, isMember);
             client.SetUserId(_userIdCount);
             
-            clientManager.AddActiveClient(client);
+            _clientManager.AddActiveClient(client);
             
             _activeClient = client;
         }
@@ -112,7 +119,7 @@ namespace Order
 
         public void CancelOrder()
         {
-            clientManager.RemoveActiveClient(_activeClient);
+            _clientManager.RemoveActiveClient(_activeClient);
             _activeClient = null;
             
             _activeFactory.CancelOrder();
@@ -156,7 +163,9 @@ namespace Order
 
         public string GetTotalPrice()
         {
-            return _activeFactory.GetActiveOrderTotalValue().ToString();
+            var tempOrder = _activeFactory.GetActiveOrder();
+            _discountManager.ApplyDiscountStrategy(tempOrder);
+            return tempOrder.GetOrderTotalPrice().ToString();
         }
 
         public List<OrderItem> GetActiveOrder()

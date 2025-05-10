@@ -21,7 +21,7 @@ namespace Navigation
 
         private void Start()
         {
-            // TODO: clean up
+            mainMenuScreen.SetActive(true);
             clientInfoScreen.SetActive(false);
             createOrderScreen.SetActive(false);
             addItemScreen.SetActive(false);
@@ -45,9 +45,9 @@ namespace Navigation
             ShowScreen(createOrderScreen);
         }
         
-        public void SaveClientAndGoToCreateOrderScreen(string clientName, string clientAddress, string clientPhone)
+        public void SaveClientAndGoToCreateOrderScreen(string clientName, string clientAddress, string clientPhone, bool isMember)
         {
-            orderManager.SaveClientData(clientName, clientAddress, clientPhone);
+            orderManager.SaveClientData(clientName, clientAddress, clientPhone, isMember);
             ShowScreen(createOrderScreen);
         }
 

@@ -2,7 +2,7 @@ namespace User
 {
     public abstract class User
     {
-        protected int UserId;
+        public int UserId { get; private set; }
         protected string UserFullName;
         protected string UserPhone;
         protected string UserAddress;

@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace User.Employees
 {
-    public class EmployeeManager : MonoBehaviour
+    public class EmployeeManager
     {
-        private List<Employee> _activeEmployees = new List<Employee>();
+        private List<Employee> _activeEmployees = new ();
 
-        private void Start()
+        public EmployeeManager()
         {
             // Mocked employee 
             var newEmployee = new Employee("Employee 1", "Address 123", "1234 5678");

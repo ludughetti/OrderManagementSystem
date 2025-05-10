@@ -7,7 +7,7 @@ namespace Order.Items
     {
         public string AddOnName { get; private set; }
         public string AddOnDescription { get; private set; }
-        public float Price { get; private set; }
+        public float Price { get; set; }
         public Sprite Icon { get; private set; }
 
         // Initialization for UI display
