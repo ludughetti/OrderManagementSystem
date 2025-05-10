@@ -4,6 +4,7 @@ using Order.Builders;
 using Order.Items;
 using Order.Items.ScriptableObjects;
 using UnityEngine;
+using User;
 
 namespace Order.Factories
 {
@@ -36,11 +37,12 @@ namespace Order.Factories
                 .AddOns;
         }
 
-        public void StartNewOrder()
+        public void StartNewOrder(Client client)
         {
             Debug.Log($"Starting new order with type { OrderType.ToString() }");
             _orderBuilder = new OrderBuilder();
-            _orderBuilder.WithType(OrderType);
+            _orderBuilder.WithType(OrderType)
+                         .WithClient(client);
         }
 
         public Order ConfirmOrder()

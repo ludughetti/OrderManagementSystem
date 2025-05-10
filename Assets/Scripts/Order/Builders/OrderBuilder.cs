@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Order.Items;
+using User;
 
 namespace Order.Builders
 {
@@ -11,6 +12,12 @@ namespace Order.Builders
         public OrderBuilder WithType(OrderType orderType)
         {
             _order.Type = orderType;
+            return this;
+        }
+
+        public OrderBuilder WithClient(Client client)
+        {
+            _order.Client = client;
             return this;
         }
 

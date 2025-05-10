@@ -10,7 +10,7 @@ namespace UI.Orders
         
         [SerializeField] private OrderManager orderManager;
         
-        private void Start()
+        private void OnEnable()
         {
             SetupCards();
         }

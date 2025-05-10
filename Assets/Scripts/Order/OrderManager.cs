@@ -6,6 +6,7 @@ using Order.DTO;
 using Order.Factories;
 using Order.Items;
 using UnityEngine;
+using User;
 
 namespace Order
 {
@@ -15,6 +16,9 @@ namespace Order
         
         private Dictionary<OrderType, OrderFactory> _factories = new ();
         private OrderFactory _activeFactory;
+        private Client _activeClient;
+
+        private int _userIdCount;
         
         private void Start()
         {
@@ -47,8 +51,13 @@ namespace Order
 
         public void SaveClientData(string clientName, string clientAddress, string clientPhone)
         {
-            // TODO: Save client info for notifications
-            Debug.Log($"Saving client data: {clientName}, {clientAddress}, {clientPhone}");
+            _userIdCount++;
+            Debug.Log($"Saving active client data: {_userIdCount}, {clientName}, {clientAddress}, {clientPhone}");
+            
+            var client = new Client(clientName, clientAddress, clientPhone);
+            client.SetUserId(_userIdCount);
+            
+            _activeClient = client;
         }
 
         public List<ElementCardData> GetAvailableOrders()
@@ -83,13 +92,14 @@ namespace Order
             var orderType = (OrderType) Enum.Parse(typeof(OrderType), orderTypeValue);
             
             _activeFactory = _factories[orderType];
-            _activeFactory.StartNewOrder();
+            _activeFactory.StartNewOrder(_activeClient);
         }
 
         public Order ConfirmOrder()
         {
             var newOrder = _activeFactory.ConfirmOrder();
             _activeFactory = null;
+            _activeClient = null;
             
             return newOrder;   
         }
@@ -98,6 +108,7 @@ namespace Order
         {
             _activeFactory.CancelOrder();
             _activeFactory = null;
+            _activeClient = null;
         }
 
         public void AddNewItem(string itemName)
