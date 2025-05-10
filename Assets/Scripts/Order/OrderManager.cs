@@ -7,12 +7,16 @@ using Order.Factories;
 using Order.Items;
 using UnityEngine;
 using User;
+using User.Clients;
+using User.Employees;
 
 namespace Order
 {
     public class OrderManager : MonoBehaviour
     {
         [SerializeField] private OrderDataProvider orderDataProvider;
+        [SerializeField] private ClientManager clientManager;
+        [SerializeField] private EmployeeManager employeeManager;
         
         private Dictionary<OrderType, OrderFactory> _factories = new ();
         private OrderFactory _activeFactory;
@@ -56,6 +60,8 @@ namespace Order
             
             var client = new Client(clientName, clientAddress, clientPhone);
             client.SetUserId(_userIdCount);
+            
+            clientManager.AddActiveClient(client);
             
             _activeClient = client;
         }
@@ -106,9 +112,11 @@ namespace Order
 
         public void CancelOrder()
         {
+            clientManager.RemoveActiveClient(_activeClient);
+            _activeClient = null;
+            
             _activeFactory.CancelOrder();
             _activeFactory = null;
-            _activeClient = null;
         }
 
         public void AddNewItem(string itemName)
